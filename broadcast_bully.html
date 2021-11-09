@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module broadcast_bully</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>broadcast_bully</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/anrgusc/spa/core_scripts/asynchrony/broadcast_bully.py">/home/anrgusc/spa/core_scripts/asynchrony/broadcast_bully.py</a></font></td></tr></table>
+    <p><tt>Broadcast&nbsp;Bully:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-an&nbsp;alternative&nbsp;to&nbsp;the&nbsp;classic&nbsp;Bully&nbsp;algorithm<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-uses&nbsp;the&nbsp;broadcast&nbsp;protocol&nbsp;to&nbsp;communicate&nbsp;with&nbsp;nodes&nbsp;in&nbsp;the&nbsp;network<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-sends&nbsp;and&nbsp;receives&nbsp;messages&nbsp;containing&nbsp;IP&nbsp;addresses,&nbsp;victory&nbsp;messages,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;election&nbsp;messages,&nbsp;and&nbsp;timerout&nbsp;messages<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-requires&nbsp;manual&nbsp;input&nbsp;(integer)&nbsp;from&nbsp;console&nbsp;for&nbsp;timeout&nbsp;period<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-timeout&nbsp;period&nbsp;is&nbsp;used&nbsp;to&nbsp;simulate&nbsp;a&nbsp;node&nbsp;failure<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-compares&nbsp;known&nbsp;IP&nbsp;addresses&nbsp;with&nbsp;its&nbsp;own&nbsp;and&nbsp;correctly&nbsp;elects&nbsp;a&nbsp;coordinator&nbsp;as&nbsp;nodes&nbsp;fail"</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="asyncio.html">asyncio</a><br>
+</td><td width="25%" valign=top><a href="socket.html">socket</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-beacon_broadcast"><strong>beacon_broadcast</strong></a>(state)</dt><dd><tt>Async&nbsp;method&nbsp;to&nbsp;broadcast&nbsp;messages<br>
+Accepts:&nbsp;state&nbsp;which&nbsp;is&nbsp;an&nbsp;empty&nbsp;object&nbsp;from&nbsp;the&nbsp;udp_broadcast&nbsp;class<br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;creates&nbsp;a&nbsp;datagram&nbsp;connection&nbsp;and&nbsp;allows&nbsp;for&nbsp;broadcast</tt></dd></dl>
+ <dl><dt><a name="-decode_msg"><strong>decode_msg</strong></a>(data, state)</dt><dd><tt>Method&nbsp;to&nbsp;decode&nbsp;a&nbsp;received&nbsp;message<br>
+Accepts:&nbsp;state&nbsp;which&nbsp;is&nbsp;an&nbsp;empty&nbsp;object&nbsp;from&nbsp;the&nbsp;udp_broadcast&nbsp;class<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;which&nbsp;is&nbsp;a&nbsp;bytes&nbsp;object&nbsp;containing&nbsp;the&nbsp;incoming&nbsp;data<br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;decodes&nbsp;a&nbsp;message&nbsp;and&nbsp;checks&nbsp;if&nbsp;it&nbsp;has&nbsp;victory&nbsp;in&nbsp;it</tt></dd></dl>
+ <dl><dt><a name="-election"><strong>election</strong></a>(state)</dt><dd><tt>Async&nbsp;method&nbsp;to&nbsp;elect&nbsp;a&nbsp;coordinator<br>
+Accepts:&nbsp;state&nbsp;which&nbsp;is&nbsp;an&nbsp;empty&nbsp;object&nbsp;from&nbsp;the&nbsp;udp_broadcast&nbsp;class<br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;compares&nbsp;max&nbsp;key&nbsp;to&nbsp;its&nbsp;own,&nbsp;and&nbsp;broadcasts&nbsp;victory&nbsp;message&nbsp;with&nbsp;own&nbsp;IP<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declaring&nbsp;victory&nbsp;over&nbsp;all&nbsp;nodes&nbsp;in&nbsp;network&nbsp;(known&nbsp;IPs)</tt></dd></dl>
+ <dl><dt><a name="-fail_detect"><strong>fail_detect</strong></a>(state)</dt><dd><tt>Async&nbsp;method&nbsp;to&nbsp;detect&nbsp;a&nbsp;failure&nbsp;in&nbsp;a&nbsp;node&nbsp;(forced&nbsp;a&nbsp;failure&nbsp;to&nbsp;detect&nbsp;for&nbsp;testing)<br>
+Accepts:&nbsp;state&nbsp;which&nbsp;is&nbsp;an&nbsp;empty&nbsp;object&nbsp;from&nbsp;the&nbsp;udp_broadcast&nbsp;class<br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;pops&nbsp;nodes&nbsp;from&nbsp;dictionary&nbsp;if&nbsp;node&nbsp;fails&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notifies&nbsp;if&nbsp;popped&nbsp;node&nbsp;is&nbsp;coordinator,&nbsp;coordinator&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Async&nbsp;main&nbsp;method&nbsp;to&nbsp;initialize&nbsp;objects,&nbsp;get&nbsp;console&nbsp;input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;gather&nbsp;asycn&nbsp;methods&nbsp;to&nbsp;call&nbsp;and&nbsp;run&nbsp;asynchronously</tt></dd></dl>
+ <dl><dt><a name="-obtain_ip"><strong>obtain_ip</strong></a>(state)</dt><dd><tt>Method&nbsp;to&nbsp;get&nbsp;own&nbsp;ip&nbsp;address.<br>
+Accepts:&nbsp;state&nbsp;which&nbsp;is&nbsp;an&nbsp;empty&nbsp;object&nbsp;from&nbsp;the&nbsp;udp_broadcast&nbsp;class<br>
+Returns:&nbsp;ip&nbsp;address&nbsp;(string)</tt></dd></dl>
+ <dl><dt><a name="-timeout"><strong>timeout</strong></a>(period, state)</dt><dd><tt>Async&nbsp;method&nbsp;to&nbsp;set&nbsp;flag&nbsp;for&nbsp;broadcasting<br>
+Accepts:&nbsp;period&nbsp;object&nbsp;from&nbsp;console&nbsp;input,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;state&nbsp;which&nbsp;is&nbsp;an&nbsp;empty&nbsp;object&nbsp;from&nbsp;the&nbsp;udp_broadcast&nbsp;class<br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;sets&nbsp;broadcast&nbsp;to&nbsp;false&nbsp;if&nbsp;called&nbsp;after&nbsp;timeout,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;simulating&nbsp;node&nbsp;failure</tt></dd></dl>
+</td></tr></table>
+</body></html>

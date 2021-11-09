@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module udp_broadcast</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>udp_broadcast</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/anrgusc/spa/core_scripts/asynchrony/udp_broadcast.py">/home/anrgusc/spa/core_scripts/asynchrony/udp_broadcast.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;is&nbsp;a&nbsp;class:&nbsp;UDP&nbsp;Broadcast&nbsp;Protocol.<br>
+Contains&nbsp;methods&nbsp;to&nbsp;make&nbsp;a&nbsp;connection,&nbsp;receive&nbsp;a&nbsp;datagram</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="socket.html">socket</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="udp_broadcast.html#UDPBroadcastProtocol">UDPBroadcastProtocol</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UDPBroadcastProtocol">class <strong>UDPBroadcastProtocol</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#UDPBroadcastProtocol">UDPBroadcastProtocol</a>(message,&nbsp;decode_msg,&nbsp;state)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="UDPBroadcastProtocol-__init__"><strong>__init__</strong></a>(self, message, decode_msg, state)</dt><dd><tt>Method&nbsp;that&nbsp;initializes&nbsp;<a href="builtins.html#object">object</a>&nbsp;attributes</tt></dd></dl>
+
+<dl><dt><a name="UDPBroadcastProtocol-connection_lost"><strong>connection_lost</strong></a>(self, exc)</dt><dd><tt>Method&nbsp;if&nbsp;connection&nbsp;lost,&nbsp;this&nbsp;function&nbsp;is&nbsp;not&nbsp;used.</tt></dd></dl>
+
+<dl><dt><a name="UDPBroadcastProtocol-connection_made"><strong>connection_made</strong></a>(self, transport)</dt><dd><tt>Method&nbsp;to&nbsp;make&nbsp;socket&nbsp;connection&nbsp;and&nbsp;use&nbsp;the&nbsp;broadcast&nbsp;protocol<br>
+Accepts:&nbsp;transport&nbsp;<a href="builtins.html#object">object</a><br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;connects&nbsp;to&nbsp;a&nbsp;socket&nbsp;with&nbsp;the&nbsp;broadcast&nbsp;protocol</tt></dd></dl>
+
+<dl><dt><a name="UDPBroadcastProtocol-datagram_received"><strong>datagram_received</strong></a>(self, data, addr)</dt><dd><tt>Method&nbsp;to&nbsp;call&nbsp;decode&nbsp;message&nbsp;and&nbsp;pass&nbsp;datagram&nbsp;and&nbsp;address<br>
+Accepts:&nbsp;data&nbsp;<a href="builtins.html#object">object</a>&nbsp;and&nbsp;address&nbsp;<a href="builtins.html#object">object</a><br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;calls&nbsp;decode_msg()</tt></dd></dl>
+
+<dl><dt><a name="UDPBroadcastProtocol-error_received"><strong>error_received</strong></a>(self, exc)</dt><dd><tt>Method&nbsp;to&nbsp;print&nbsp;to&nbsp;console&nbsp;if&nbsp;called.&nbsp;This&nbsp;function&nbsp;is&nbsp;not&nbsp;used.<br>
+Accepts:&nbsp;exc&nbsp;<a href="builtins.html#object">object</a><br>
+Returns:&nbsp;nothing,&nbsp;it&nbsp;prints&nbsp;to&nbsp;the&nbsp;console&nbsp;when&nbsp;called</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
