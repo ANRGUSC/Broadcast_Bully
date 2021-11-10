@@ -61,7 +61,7 @@ Note that in the demo, the code is run using an alias to save time.
 
 ## Poster
 
-![poster presentation](https://github.com/binaery-a/broadcast_bully/blob/3506643c0a0e12ac110c1b66334d123a37ec2e99/Broadcast%20Bully.pdf)
+![poster presentation](https://github.com/ANRGUSC/Broadcast_Bully/blob/eef3faffa39350f4c08a1b855dd4351b79166b1e/Broadcast%20Bully%20Poster.png)
 
  
 
