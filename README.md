@@ -69,33 +69,11 @@ Note that in the demo, the code is run using an alias to save time.
 
 ## Poster
 
-The following is a poster presentation describing the broadcast bully leader election algorithm that is implemented in the code provided in this repository. 
+The following is a poster presentation that was presented at the 2021 Sigma Xi National Student Research Conference, describing the broadcast bully leader election algorithm that is implemented in the code provided in this repository. 
 
 ![poster presentation](https://github.com/ANRGUSC/Broadcast_Bully/blob/eef3faffa39350f4c08a1b855dd4351b79166b1e/Broadcast%20Bully%20Poster.png)
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
