@@ -1,5 +1,7 @@
 # Broadcast Bully
 
+This repository contains Python code to implement a distributed leader election algorithm suitable for hosts on a broadcast network. The algorithm, which we call "Broadcast Bully" involves each node beaconing their IP address periodically and using the values of the IP addresses to determine the current leader. In case a node dropping out of or joining the network, the leader may be dynamically re-elected. The implementation uses UDP Broadcast, and the Asyncio library in Python to implement the components working in an asynchronous manner. 
+
 This was written in Python 3.7.5.
 Pydoc was used to generate readable documentation.
 
