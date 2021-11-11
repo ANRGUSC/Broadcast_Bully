@@ -5,7 +5,7 @@ This repository contains Python code (version 3.7.5.) to implement a distributed
 There are two main files provided in the repo:  1) udp_broadcast.py which contains the class UDPBroadcastProtocol including methods to make a UDP broadcast connection and receive a datagram, and 2) broadcast_bully.py which is the main program implementing the leader election protocol which uses the UDPBroadcastProtocol class. 
 
 ## Code Documentation
-The python code in both modules are documented in the following files: [broadcast_bully.html](https://htmlpreview.github.io/?https://github.com/ANRGUSC/Broadcast_Bully/blob/main/broadcast_bully.html) and  [udp_broadcast.html](https://htmlpreview.github.io/?https://github.com/ANRGUSC/Broadcast_Bully/blob/main/udp_broadcast.html). Pydoc was used to generate readable documentation.
+The python code in both modules are documented in the following files: [broadcast_bully.html](https://htmlpreview.github.io/?https://github.com/ANRGUSC/Broadcast_Bully/blob/main/broadcast_bully.html) and  [udp_broadcast.html](https://htmlpreview.github.io/?https://github.com/ANRGUSC/Broadcast_Bully/blob/main/udp_broadcast.html). Pydoc was used to generate this documentation.
 
 
 
