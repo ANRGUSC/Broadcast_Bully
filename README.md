@@ -5,7 +5,7 @@ Pydoc was used to generate readable documentation.
 
 ## How to Run on CORE
 
-This program will only work and make sense if run on the [CORE network emulator](https://coreemu.github.io/core/). If you run it on your own computer, you could only run it on one node as it will have only one IP address. 
+This program will make the most sense if run on the [CORE network emulator](https://coreemu.github.io/core/) or on different computers that are on the same broadcast network. If you run it only on your own computer, you could only run it on one node as it will have only one IP address. 
 
 ## Installation
 If you don't have CORE installed, please follow the installation steps:
