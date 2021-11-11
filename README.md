@@ -53,9 +53,9 @@ An example structure is pictured below.
 8. Run the program with the command on each node:
 ```python3 broadcast_bully.py 'integer'``` where `'integer'` represents the node's timeout period. So if you write `20`, the node will terminate after 20 seconds. Ideally, you would want to run each node with different timeout periods to test election coordination.
 
-## Demo
+## Demo Video
 
-[demo](https://www.dropbox.com/sh/hq5ketykplzrdfq/AAC7BKlQy6MRC36TutnP1RnKa?dl=0&preview=cast.mp4)
+Here is a [demo video](https://www.dropbox.com/sh/hq5ketykplzrdfq/AAC7BKlQy6MRC36TutnP1RnKa?dl=0&preview=cast.mp4) showing the distributed program in action. 
 
 Note that in the demo, the code is run using an alias to save time.
 
